@@ -4,8 +4,10 @@ import React from 'react';
 class Login extends React.Component{
     render (){
         return(
+            <div className="auth-wrapper">
+            <div className="auth-inner">
             <form>
-            <h3>Log In</h3>
+            <h3>Login</h3>
 
             <div className="form-group">
                 <label>Email address</label>
@@ -26,9 +28,12 @@ class Login extends React.Component{
 
             <button type="submit" className="btn btn-primary btn-block">Submit</button>
             <p className="forgot-password text-right">
-                Forgot <a href="#">password?</a>
+             <a href="/SignUp">Dnt have an account ?</a>
+                   
             </p>
         </form>
+        </div>
+        </div>
 
         );
     }
