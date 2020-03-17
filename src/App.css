@@ -33,6 +33,25 @@ body, html, .App, #root, .auth-wrapper {
   text-align: left;
 }
 
+.container{
+ 
+  display :flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+.container-inner{
+  
+  width: 600px;
+  margin-top: 40px;
+  margin-left: 270px;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all .3s;
+}
+
 .auth-inner {
   width: 450px;
   margin: auto;
@@ -47,8 +66,21 @@ body, html, .App, #root, .auth-wrapper {
   border-color: #167bff;
   box-shadow: none;
 }
-
+.container .form-control-app:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+.form-control-app{
+  border :none;
+  border-bottom: 2px solid black;
+}
 .auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+.container h3{
   text-align: center;
   margin: 0;
   line-height: 1;
@@ -85,8 +117,18 @@ body, html, .App, #root, .auth-wrapper {
   background-size: cover;
 
 }
+.application{
+  position: absolute;
+  background-image: url("./Assets/app.jpg");
+  background-size: cover;
 
-
+  background-clip: content-box;
+  z-index: -5;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .started{
   color: #f6ada0;

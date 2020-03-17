@@ -6,7 +6,7 @@ import Login from './Components/Login';
 import SignUp from './Components/SignUp';
 import Home from './Components/Home';
 import Profile from './Screens/Profile';
-
+import Application from './Screens/Application';
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
      <Route exact path="/Login" component={Login} />
      <Route exact path="/SignUp" component={SignUp} />
      <Route exact path="/Profile" component={Profile} />
+     <Route exact path="/Application" component={Application} />
     </Router>
   );
 }
-
 export default App;
