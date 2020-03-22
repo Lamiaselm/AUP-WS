@@ -7,8 +7,6 @@ import SignUp from './Components/SignUp';
 import Home from './Components/Home';
 import Profile from './Screens/Profile';
 import Application from './Screens/Application';
-import SimpleTable from './Screens/VisualiserApp';
-import VisualiserApp from './Screens/VisualiserApp';
 import Table from './Components/Table';
 
 
@@ -21,7 +19,6 @@ function App() {
      <Route exact path="/SignUp" component={SignUp} />
      <Route exact path="/Profile" component={Profile} />
      <Route exact path="/Application" component={Application} />
-     <Route exact path="/table" component={VisualiserApp} />
      <Route exact path="/data" component={Table} />
 
 
