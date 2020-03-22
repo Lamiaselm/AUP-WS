@@ -40,6 +40,16 @@ body, html, .App, #root, .auth-wrapper {
   flex-direction: column;
   text-align: left;
 }
+.container-table{
+ 
+  display :flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-left: 170px;
+  padding-right: 80px;
+
+}
 .container-inner{
   
   width: 600px;

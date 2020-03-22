@@ -7,8 +7,6 @@ class Home extends React.Component{
                 <div>
                  <img className="accueil"></img>
                  </div>
-              
-
         );
     }
 }

@@ -7,8 +7,9 @@ import SignUp from './Components/SignUp';
 import Home from './Components/Home';
 import Profile from './Screens/Profile';
 import Application from './Screens/Application';
-import VisualiserApp from './Screens/VisualiserApp';
-import DataTable from 'react-data-components/lib/DataTable';
+import SimpleTable from './Screens/VisualiserApp';
+
+
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
      <Route exact path="/SignUp" component={SignUp} />
      <Route exact path="/Profile" component={Profile} />
      <Route exact path="/Application" component={Application} />
-     <Route exact path="/visualiser" component={DataTable} />
+     <Route exact path="/table" component={SimpleTable} />
+
+     
      
     </Router>
   );
