@@ -24,6 +24,9 @@ export default props => {
       <a className="menu-item" href="/Team">
       Team
       </a>
+      <a className="menu-item" href="/data">
+       Answers
+      </a>
 
       <a className="menu-item" href="/Deconexion">
      Deconexion

@@ -8,6 +8,7 @@ import Home from './Components/Home';
 import Profile from './Screens/Profile';
 import Application from './Screens/Application';
 import Table from './Components/Table';
+import Detail from './Screens/Detail';
 
 
 
@@ -20,10 +21,7 @@ function App() {
      <Route exact path="/Profile" component={Profile} />
      <Route exact path="/Application" component={Application} />
      <Route exact path="/data" component={Table} />
-
-
-     
-     
+     <Route exact path="/detail" component={Detail} />
     </Router>
   );
 }

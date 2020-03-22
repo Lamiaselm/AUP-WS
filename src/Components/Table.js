@@ -34,6 +34,8 @@ class Table extends React.Component{
       <th scope="col">Submit Date</th>
       <th scope="col">Participant</th>
       <th scope="col">Email</th>
+      <th scope="col">Link</th>
+      <th scope="col">Statut</th>
     </tr>
   </thead>
   <tbody>
@@ -42,7 +44,7 @@ class Table extends React.Component{
     {items.map(item => ( <tr key={item.id_app}>
                          <td> {item.id_app}</td>
                           <td>{item.created_at}</td>
-                          <td>{item.nom}</td>
+                          <td>{item.nom} &nbsp;{item.prenom}</td>
                           <td>{item.email}</td>
                         </tr>
                     ))}
