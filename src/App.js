@@ -9,15 +9,18 @@ import Profile from './Screens/Profile';
 import Application from './Screens/Application';
 import Table from './Components/Table';
 import Detail from './Screens/Detail';
+import Register from './Components/Register';
+import Navbar from './Components/Navbar';
 
 
 
 function App() {
   return (
       <Router>
+        <Navbar/>
      <Route exact path="/" component={Home}  />
      <Route exact path="/Login" component={Login} />
-     <Route exact path="/SignUp" component={SignUp} />
+     <Route exact path="/register" component={Register} />
      <Route exact path="/Profile" component={Profile} />
      <Route exact path="/Application" component={Application} />
      <Route exact path="/data" component={Table} />
