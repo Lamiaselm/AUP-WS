@@ -1,31 +1,29 @@
-import React from 'react';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Login from './Components/Login';
-import SignUp from './Components/SignUp';
-import Home from './Components/Home';
-import Profile from './Screens/Profile';
-import Application from './Screens/Application';
-import Table from './Components/Table';
-import Detail from './Screens/Detail';
-import Register from './Components/Register';
-import Navbar from './Components/Navbar';
+  
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
+import Navbar from './components/Navbar'
+import Landing from './components/Landing'
+import Login from './components/Login'
+import Register from './components/Register'
+import Profile from './Screens/Profile'
 
-
-function App() {
-  return (
+class App extends Component {
+  render() {
+    return (
       <Router>
-        <Navbar/>
-     <Route exact path="/" component={Home}  />
-     <Route exact path="/Login" component={Login} />
-     <Route exact path="/register" component={Register} />
-     <Route exact path="/Profile" component={Profile} />
-     <Route exact path="/Application" component={Application} />
-     <Route exact path="/data" component={Table} />
-     <Route exact path="/detail" component={Detail} />
-    </Router>
-  );
+        <div className="App">
+          <Navbar />
+          <Route exact path="/" component={Landing} />
+          <div className="container">
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/profile" component={Profile} />
+          </div>
+        </div>
+      </Router>
+    )
+  }
 }
-export default App;
+
+export default App
