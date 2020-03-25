@@ -2,11 +2,12 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Navbar from './components/Navbar'
-import Landing from './components/Landing'
-import Login from './components/Login'
-import Register from './components/Register'
+import Navbar from './Components/Navbar'
+import Landing from './Components/Landing'
+import Login from './Components/Login'
+import Register from './Components/Register'
 import Profile from './Screens/Profile'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
   render() {
