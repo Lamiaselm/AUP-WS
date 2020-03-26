@@ -28,7 +28,7 @@ class Landing extends Component {
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link to="/profile" className="nav-link">
-            User
+            Profile
           </Link>
         </li>
         <li className="nav-item">

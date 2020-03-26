@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getProfile } from '../Components/UserFunctions'
+import Sidebar from '../Components/Sidebar'
 
 class Profile extends Component {
     constructor() {
@@ -21,6 +22,8 @@ class Profile extends Component {
 
     render() {
         return (
+            <div>
+            <Sidebar/>
             <div className="container">
                 <div className="jumbotron mt-5">
                     <div className="col-sm-4 mx-auto">
@@ -39,6 +42,7 @@ class Profile extends Component {
                         </tbody>
                     </table>
                 </div>
+            </div>
             </div>
         )
     }
