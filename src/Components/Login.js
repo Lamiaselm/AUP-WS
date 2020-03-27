@@ -70,9 +70,9 @@ class Login extends Component {
                         </div>
                     </div>
     
-                    <button type="submit" className="btn btn-primary btn-block">Submit</button>
+                    <button type="submit" className="btn btn-primary btn-block">Log in</button>
                     <p className="forgot-password text-right">
-                        new account ? <a href="/register">Log in !</a>
+                        new account ? <a href="/register">Sign Up!</a>
                     </p>
                 </form>
                 </div>

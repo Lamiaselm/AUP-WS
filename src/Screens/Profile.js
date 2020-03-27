@@ -7,6 +7,7 @@ class Profile extends Component {
         super()
         this.state = {
             nom: '',
+            prenom:'',
             email: ''
         }
     }
@@ -15,6 +16,7 @@ class Profile extends Component {
         getProfile().then(res => {
             this.setState({
                 nom: res.user.nom,
+                prenom: res.user.prenom,
                 email: res.user.email
             })
         })
@@ -25,16 +27,13 @@ class Profile extends Component {
             <div>
             <Sidebar/>
             <div className="container">
-                <div className="jumbotron mt-5">
+                <div className="jumbotron mt-4">
                     <div className="col-sm-4 mx-auto">
-                        <h1 className="text-center">PROFILE</h1>
+        <h1 className="text-center">Welcome  {this.state.nom} &nbsp; {this.state.prenom}</h1>  
                     </div>
                     <table className="table col-md-4 mx-auto">
                         <tbody>
-                            <tr>
-                                <td>Name</td>
-                                <td>{this.state.nom}</td>
-                            </tr>
+                           
                             <tr>
                                 <td>Email</td>
                                 <td>{this.state.email}</td>
