@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
+import Sidebar from './Sidebar'
 
 class Landing extends Component {
   logOut(e) {
     e.preventDefault()
     localStorage.removeItem('usertoken')
-    this.props.history.push(`/`)
+    this.props.history.push(`/login`)
   }
 
   render() {
     const loginRegLink = (
-      <ul className="navbar-nav">
+      <ul className="navbar-nav mr-auto">
         <li className="nav-item">
           <Link to="/login" className="nav-link">
             Login
@@ -21,11 +22,16 @@ class Landing extends Component {
             Register
           </Link>
         </li>
+        <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
       </ul>
     )
 
     const userLink = (
-      <ul className="navbar-nav">
+      <ul className="navbar-nav mr-auto">
         <li className="nav-item">
           <Link to="/profile" className="nav-link">
             Profile
@@ -36,37 +42,35 @@ class Landing extends Component {
             Logout
           </a>
         </li>
+        <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
       </ul>
     )
 
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark rounded">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarsExample10"
-          aria-controls="navbarsExample10"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
+    
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+       <button className="navbar-toggler" >
+          
+          
+       </button>
+       
 
         <div
-          className="collapse navbar-collapse justify-content-md-center"
-          id="navbarsExample10"
+         className="collapse navbar-collapse" id="navbarSupportedContent"
         >
-          <ul className="navbar-nav">
+          <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link">
-                Home
-              </Link>
+              
             </li>
           </ul>
           {localStorage.usertoken ? userLink : loginRegLink}
         </div>
       </nav>
+      
     )
   }
 }

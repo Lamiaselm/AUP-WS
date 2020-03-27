@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { getProfile } from '../Components/UserFunctions'
 import Sidebar from '../Components/Sidebar'
+import Navbar from '../Components/Navbar'
 
 class Profile extends Component {
     constructor() {
@@ -25,7 +26,9 @@ class Profile extends Component {
     render() {
         return (
             <div>
+
             <Sidebar/>
+            <Navbar/>
             <div className="container">
                 <div className="jumbotron mt-4">
                     <div className="col-sm-4 mx-auto">

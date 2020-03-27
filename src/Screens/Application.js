@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
+import Navbar from '../Components/Navbar'
 class Application extends React.Component{
     constructor(){
         super();
@@ -35,8 +36,10 @@ class Application extends React.Component{
     }
     render() {
         return(
-            <div>
+            <div> 
                 <Sidebar/>
+                <Navbar/>
+                
                
                   <div className="container">
                       <div className="container-inner">
@@ -88,7 +91,7 @@ class Application extends React.Component{
                                  <input type="text" className="form-control" placeholder="Enter here " name="comments"value={this.state.comments} onChange={(item)=>{this.setState({comments:item.target.value})}}/>
                                  </div>
                                  <div className="form-group">
-                                 <button onClick={()=>{this.submit()}}>Submit</button>
+                                 <button type="submit" className="btn btn-primary btn-block" onClick={()=>{this.submit()}}>Submit</button>
 
                                  </div>
 

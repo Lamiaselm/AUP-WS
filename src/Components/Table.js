@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
+import Navbar from '../Components/Navbar'
 class Table extends React.Component{
     constructor(props){
         super(props);
@@ -26,6 +27,7 @@ class Table extends React.Component{
         return (
     <div>
     <Sidebar/>
+    <Navbar/>
     <div className="container-table">
     <table class="table">
     <thead class="thead-dark">
