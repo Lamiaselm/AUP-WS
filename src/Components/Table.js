@@ -28,8 +28,8 @@ class Table extends React.Component{
     <Sidebar/>
     <div className="container-table">
     <table class="table">
-  <thead class="thead-dark">
-    <tr>
+    <thead class="thead-dark">
+     <tr>
       <th scope="col">#</th>
       <th scope="col">Submit Date</th>
       <th scope="col">Participant</th>

@@ -1,25 +1,34 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Components/Navbar'
 import Landing from './Components/Landing'
 import Login from './Components/Login'
 import Register from './Components/Register'
 import Profile from './Screens/Profile'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from './Components/Table'
+import Application from './Screens/Application'
+import Home from './Components/Home'
+import Sidebar from './Components/Sidebar';
+import './App.css';
+
+
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-          <Navbar />
-          <Route exact path="/" component={Landing} />
-          <div className="container">
+            
+            <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={Profile} />
-          </div>
+            <Route exact path="/application" component={Application} />
+            <Route exact path="/table" component={Table} />
+            <Route exact path="/home" component={Home} />
+            
+         
         </div>
       </Router>
     )
