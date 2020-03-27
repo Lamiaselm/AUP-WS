@@ -59,7 +59,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 .container-inner{
   
-  width: 600px;
+  width: 500px;
   margin-top: 40px;
   margin-left: 270px;
   background: #ffffff;
@@ -118,7 +118,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 .forgot-password a {
-  color: #167bff;
+  color: #232C59;
 }
 .accueil{
   position: absolute;

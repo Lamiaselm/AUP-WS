@@ -9,6 +9,7 @@ class Register extends Component {
             prenom: '',
             email: '',
             password: '',
+            confirm_password:'',
             errors: {}
         }
 
@@ -20,6 +21,11 @@ class Register extends Component {
         this.setState({ [e.target.name]: e.target.value })
     }
     onSubmit (e) {
+        const password=this.state.password;
+        const confirm_password=this.state.confirm_password;
+        if (password !== confirm_password){
+            alert("password doesnt match please confirm ur password correctly");
+        }else {
         e.preventDefault()
 
         const newUser = {
@@ -33,72 +39,92 @@ class Register extends Component {
             this.props.history.push(`/login`)
         })
     }
+    }
 
     render () {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-6 mt-5 mx-auto">
-                        <form noValidate onSubmit={this.onSubmit}>
-                            <h1 className="h3 mb-3 font-weight-normal">
-                                Register
-                            </h1>
-                            <div className="form-group">
-                                <label htmlFor="name">First name</label>
+            <div className="auth-wrapper">
+            <div className="auth-inner">
+            <form noValidate onSubmit={this.onSubmit}>
+            <h3>Sign Up</h3>
+
+            <div className="form-group">
+                                <label htmlFor="name">Last name</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     name="nom"
-                                    placeholder="Enter your nom"
+                                    placeholder="Enter Last name"
                                     value={this.state.nom}
                                     onChange={this.onChange}
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="name">Last name</label>
+                                <label htmlFor="name">First name</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     name="prenom"
-                                    placeholder="Enter your prenom"
+                                    placeholder="Enter First name"
                                     value={this.state.prenom}
                                     onChange={this.onChange}
                                 />
                             </div>
+
                             <div className="form-group">
                                 <label htmlFor="email">Email address</label>
                                 <input
                                     type="email"
                                     className="form-control"
                                     name="email"
-                                    placeholder="Enter email"
+                                    placeholder="Enter Email"
                                     value={this.state.email}
                                     onChange={this.onChange}
                                 />
                             </div>
+
                             <div className="form-group">
                                 <label htmlFor="password">Password</label>
                                 <input
                                     type="password"
                                     className="form-control"
                                     name="password"
-                                    placeholder="Password"
+                                    placeholder="Enter Password"
                                     value={this.state.password}
                                     onChange={this.onChange}
                                 />
                             </div>
-                            <button
-                                type="submit"
-                                className="btn btn-lg btn-primary btn-block"
-                            >
-                                Register!
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                            <div className="form-group">
+                                <label htmlFor="confirm_password">Confirm Password</label>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    name="confirm_password"
+                                    placeholder="Confirm Password"
+                                    value={this.state.confirm_password}
+                                    onChange={this.onChange}
+                                />
+                            </div>
+
+            <button type="submit" className="btn btn-primary btn-block" >Sign Up !</button>
+            <p className="forgot-password text-right">
+                Already registered <a href="/login">sign in?</a>
+            </p>
+        </form>
+        </div>
+        </div>
         )
     }
 }
 
 export default Register
+
+
+
+
+
+
+
+
+
+
