@@ -26,10 +26,11 @@ class Detail extends React.Component{
     }
     render (){
         const {items} =this.state
-        console.log(localStorage.getItem('usertoken').id) 
+       
         return(
             
             <div>
+              
             <Sidebar/>
             <Navbar/>
             <div className="container">
@@ -39,19 +40,21 @@ class Detail extends React.Component{
             
              <table class="table">
                  <tbody>
+                 
                  {items.map(item => 
                  ( 
-                 <div>    
-                 <tr key={localStorage.getItem('usertoken').id}> <td> Family name : {item.nom}</td>  </tr>
-                 <tr key={localStorage.getItem('usertoken').id}> <td> First name : {item.prenom}</td>  </tr>
-                 <tr key={localStorage.getItem('usertoken').id}> <td> Email : {item.email}</td>  </tr>   
-                 <tr key={localStorage.getItem('usertoken').id}> <td> T-Shirt size : {item.tshirt}</td>  </tr>   
-                 <tr key={localStorage.getItem('usertoken').id}> <td> About you : {item.abt_urslf}</td>  </tr>   
-                 <tr key={localStorage.getItem('usertoken').id}> <td> Why would you attend AUP's competion : {item.why_aup}</td>  </tr> 
-                 <tr key={localStorage.getItem('usertoken').id}> <td> Link CV : {item.cv}</td>  </tr>   
-                 <tr key={localStorage.getItem('usertoken').id}> <td> Link Github : {item.github}</td>  </tr>   
-                 <tr key={localStorage.getItem('usertoken').id}> <td> Link Linkedin : {item.linkedin}</td>  </tr>   
-                 <tr key={localStorage.getItem('usertoken').id}> <td> Any comments : {item.comments}</td>  </tr>   
+                 <div key={}> 
+            
+                 <tr > <td> Family name : {item.nom}</td>  </tr>
+                 <tr > <td> First name : {item.prenom}</td>  </tr>
+                 <tr > <td> Email : {item.email}</td>  </tr>   
+                 <tr> <td> T-Shirt size : {item.tshirt}</td>  </tr>   
+                 <tr > <td> About you : {item.abt_urslf}</td>  </tr>   
+                 <tr > <td> Why would you attend AUP's competion : {item.why_aup}</td>  </tr> 
+                 <tr > <td> Link CV : {item.cv}</td>  </tr>   
+                 <tr > <td> Link Github : {item.github}</td>  </tr>   
+                 <tr> <td> Link Linkedin : {item.linkedin}</td>  </tr>   
+                 <tr > <td> Any comments : {item.comments}</td>  </tr>   
 
 
                  </div>     
@@ -62,10 +65,12 @@ class Detail extends React.Component{
             </div>
             </div>
             </div>
+                
             </div>
            
          
         );
+                 }
     }
-}
+
 export default Detail;

@@ -17,20 +17,17 @@ class Application extends React.Component{
             github:"",
             linkedin:"",
             comments:"",
-            id_user:"",
+            
+            
+           
         }
          }
-     
+      
 
     submit() {
-    
-       
-            getProfile().then(res => {
-                this.setState({
-                   id_user:res.user.id
-                })
-                console.log(this.state.id_user)
-            })
+        
+            
+           
         
         fetch('http://127.0.0.1:8000/api/save',{
             method:'post',
@@ -45,15 +42,18 @@ class Application extends React.Component{
         })
        console.log(this.state);
     }
+
+   
     render() {  
-        console.log(localStorage.getItem('usertoken')) 
         return(
          
             <div> 
                 <Sidebar/>
                 <Navbar/>
                 
-               
+                
+
+                   
                   <div className="container">
                       <div className="container-inner">
                           <form method="POST" >
@@ -61,7 +61,7 @@ class Application extends React.Component{
                               
                                 <div className="form-group">
                                  <label>Family Name</label>
-                                 <input type="text" className="form-control" placeholder="Enter here " name="nom" value={localStorage.getItem('usertoken').nom} onChange={(item)=>{this.setState({nom:item.target.value})}}/>
+                                 <input type="text" className="form-control" placeholder="Enter here " name="nom" value={this.state.nom} onChange={(item)=>{this.setState({nom:item.target.value})}}/>
                                  </div>
                                  <div className="form-group">
                                  <label>First Name</label>
@@ -101,11 +101,11 @@ class Application extends React.Component{
                                  </div>
                                  <div className="form-group">
                                  <label>Any comments ?</label>
-                                 <input type="text" className="form-control" placeholder="Enter here " name="comments"value={this.state.comments} onChange={(item)=>{this.setState({comments:item.target.value})}}/>
+                                 <input type="text" className="form-control" placeholder="Enter here " name="comments" value={this.state.comments} onChange={(item)=>{this.setState({comments:item.target.value})}}/>
                                  </div>
                                  <div className="form-group">
                                  <button type="submit" className="btn btn-primary btn-block" onClick={()=>{this.submit()}}>Submit</button>
-
+                                 
                                  </div>
 
                           </form>

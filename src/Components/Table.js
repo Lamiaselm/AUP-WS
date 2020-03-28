@@ -49,7 +49,15 @@ class Table extends React.Component{
                           <td>{item.created_at}</td>
                           <td>{item.nom} &nbsp;{item.prenom}</td>
                           <td>{item.email}</td>
-                          <td> <Link to="/detail" className="nav-link">App Detail</Link></td>
+                          <td> <Link to={{
+                                   pathname:'/detail',
+                                   aboutProps:{
+                                       id_app:item.id_app
+                                   }
+                          }}
+                          
+                           className="nav-link">App Detail</Link>
+                           </td>
                         </tr>
                     ))}
     
