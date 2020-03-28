@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar'
+import { getProfile } from '../Components/UserFunctions'
 class Application extends React.Component{
     constructor(){
         super();
@@ -16,10 +17,20 @@ class Application extends React.Component{
             github:"",
             linkedin:"",
             comments:"",
+            id_user:"",
         }
          }
+     
 
     submit() {
+    
+       
+            getProfile().then(res => {
+                this.setState({
+                   id_user:res.user.id
+                })
+                console.log(this.state.id_user)
+            })
         
         fetch('http://127.0.0.1:8000/api/save',{
             method:'post',
@@ -32,10 +43,12 @@ class Application extends React.Component{
         ).then(function(response){
             response.json().then(function(resp){console.log(resp)})
         })
-        console.log(this.state);
+       console.log(this.state);
     }
-    render() {
+    render() {  
+        console.log(localStorage.getItem('usertoken')) 
         return(
+         
             <div> 
                 <Sidebar/>
                 <Navbar/>
@@ -48,7 +61,7 @@ class Application extends React.Component{
                               
                                 <div className="form-group">
                                  <label>Family Name</label>
-                                 <input type="text" className="form-control" placeholder="Enter here " name="nom" value={this.state.nom} onChange={(item)=>{this.setState({nom:item.target.value})}}/>
+                                 <input type="text" className="form-control" placeholder="Enter here " name="nom" value={localStorage.getItem('usertoken').nom} onChange={(item)=>{this.setState({nom:item.target.value})}}/>
                                  </div>
                                  <div className="form-group">
                                  <label>First Name</label>

@@ -134,6 +134,7 @@ body, html, .App, #root, .auth-wrapper {
   background-size: cover;
 
 }
+
 .application{
   position: absolute;
   background-image: url("./Assets/app.jpg");

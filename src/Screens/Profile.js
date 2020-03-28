@@ -20,6 +20,7 @@ class Profile extends Component {
                 prenom: res.user.prenom,
                 email: res.user.email
             })
+            console.log(res.user.id)
         })
     }
 

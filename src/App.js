@@ -9,7 +9,7 @@ import Profile from './Screens/Profile'
 import Table from './Components/Table'
 import Application from './Screens/Application'
 import Home from './Components/Home'
-import Sidebar from './Components/Sidebar';
+import Detail from './Screens/Detail'
 import './App.css';
 
 
@@ -27,6 +27,7 @@ class App extends Component {
             <Route exact path="/application" component={Application} />
             <Route exact path="/table" component={Table} />
             <Route exact path="/home" component={Home} />
+            <Route exact path="/detail" component={Detail} />
             
          
         </div>

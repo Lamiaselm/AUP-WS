@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar'
+import { Link, withRouter } from 'react-router-dom'
 class Table extends React.Component{
     constructor(props){
         super(props);
@@ -48,6 +49,7 @@ class Table extends React.Component{
                           <td>{item.created_at}</td>
                           <td>{item.nom} &nbsp;{item.prenom}</td>
                           <td>{item.email}</td>
+                          <td> <Link to="/detail" className="nav-link">App Detail</Link></td>
                         </tr>
                     ))}
     
