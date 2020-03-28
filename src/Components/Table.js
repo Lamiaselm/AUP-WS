@@ -51,7 +51,7 @@ class Table extends React.Component{
                           <td>{item.email}</td>
                           <td> <Link to={{
                                    pathname:'/detail',
-                                   aboutProps:{
+                                   state:{
                                        id_app:item.id_app
                                    }
                           }}

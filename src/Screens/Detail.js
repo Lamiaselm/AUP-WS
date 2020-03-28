@@ -9,8 +9,9 @@ class Detail extends React.Component{
         }
     }
     componentDidMount() {
-
-        fetch('http://127.0.0.1:8000/api/app')
+        const {id_app}=this.props.location.state
+        console.log(id_app)
+        fetch('http://127.0.0.1:8000/api/app/?id_app='+id_app)
             .then(res => res.json())
             .then(json => {
                 this.setState({
@@ -26,6 +27,7 @@ class Detail extends React.Component{
     }
     render (){
         const {items} =this.state
+       
        
         return(
             
@@ -43,9 +45,9 @@ class Detail extends React.Component{
                  
                  {items.map(item => 
                  ( 
-                 <div key={}> 
+                 <div > 
             
-                 <tr > <td> Family name : {item.nom}</td>  </tr>
+                 <tr  > <td> Family name : {item.nom}</td>  </tr>
                  <tr > <td> First name : {item.prenom}</td>  </tr>
                  <tr > <td> Email : {item.email}</td>  </tr>   
                  <tr> <td> T-Shirt size : {item.tshirt}</td>  </tr>   
