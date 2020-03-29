@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar'
 import { Link, withRouter } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class Table extends React.Component{
     constructor(props){
         super(props);
@@ -57,7 +58,7 @@ class Table extends React.Component{
                                    }
                           }}
                           
-                           className="nav-link">App Detail</Link>
+                           className="nav-link">check</Link>
                            </td>
                         </tr>
                     ))}

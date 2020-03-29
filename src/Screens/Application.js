@@ -35,7 +35,7 @@ class Application extends React.Component{
             headers:{
                 'Accept':'application/json',
                 'Content-Type':'application/json',
-            }
+            },
         }
         ).then(function(response){
             response.json().then(function(resp){console.log(resp)})

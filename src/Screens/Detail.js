@@ -33,19 +33,44 @@ class Detail extends React.Component{
     accept(){
         const {id_app}=this.props.location.state
         console.log(id_app)
+
+
+
         fetch('http://127.0.0.1:8000/api/accept/'+id_app,{
             method:'post',
-            body:JSON.stringify(this.state),
+          
             headers:{
                 'Accept':'application/json',
                 'Content-Type':'application/json',
-            }
+            },
+            body:JSON.stringify(this.state),
         }
-        ).then(function(response){
-            response.json().then(function(resp){console.log(resp)})
-        })
-        console.log(this.state); }
+        )
+       
     
+    }
+    
+
+    reject(){
+        const {id_app}=this.props.location.state
+        console.log(id_app)
+
+
+
+        fetch('http://127.0.0.1:8000/api/reject/'+id_app,{
+            method:'post',
+          
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json',
+            },
+            body:JSON.stringify(this.state),
+        }
+        )
+       
+    
+    }
+
     render (){
         const {items} =this.state
        
@@ -56,7 +81,7 @@ class Detail extends React.Component{
               
             <Sidebar/>
             <Navbar/>
-            <div className="container">
+            <div className="containerDetail">
                 <div className="jumbotron mt-4">
                     <div className="col-sm-6 mx-auto">
         <h4 className="text-center">Application detail</h4>  
@@ -68,16 +93,16 @@ class Detail extends React.Component{
                  ( 
                  
                     <tbody>
-                 <tr> <td> Family name : {item.nom}</td>  </tr>
-                 <tr> <td> First name : {item.prenom}</td>  </tr>
-                 <tr> <td> Email : {item.email}</td>  </tr>   
-                 <tr> <td> T-Shirt size : {item.tshirt}</td>  </tr>   
-                 <tr> <td> About you : {item.abt_urslf}</td>  </tr>   
-                 <tr> <td> Why would you attend AUP's competion : {item.why_aup}</td>  </tr> 
-                 <tr> <td> Link CV : {item.cv}</td>  </tr>   
-                 <tr> <td> Link Github : {item.github}</td>  </tr>   
-                 <tr> <td> Link Linkedin : {item.linkedin}</td>  </tr>   
-                 <tr> <td> Any comments : {item.comments}</td>  </tr>   
+                 <tr> <td>Family name : {item.nom}</td></tr>
+                 <tr> <td>First name : {item.prenom}</td></tr>
+                 <tr> <td>Email : {item.email}</td></tr>   
+                 <tr> <td>T-Shirt size : {item.tshirt}</td></tr>   
+                 <tr> <td>About you : {item.abt_urslf}</td></tr>   
+                 <tr> <td>Why would you attend AUP's competion : {item.why_aup}</td></tr> 
+                 <tr> <td>Link CV : {item.cv}</td></tr>   
+                 <tr> <td>Link Github : {item.github}</td></tr>   
+                 <tr> <td>Link Linkedin : {item.linkedin}</td></tr>   
+                 <tr> <td>Any comments : {item.comments}</td></tr>   
 
 
                  </tbody>   
