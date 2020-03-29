@@ -204,3 +204,10 @@ body, html, .App, #root, .auth-wrapper {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+.buttonDetail{
+ 
+  margin-left: 130px;
+}
+.container{
+ width: 800px;
+}

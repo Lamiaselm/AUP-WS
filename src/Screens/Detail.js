@@ -30,6 +30,22 @@ class Detail extends React.Component{
             });
 
     }
+    accept(){
+        const {id_app}=this.props.location.state
+        console.log(id_app)
+        fetch('http://127.0.0.1:8000/api/accept/'+id_app,{
+            method:'post',
+            body:JSON.stringify(this.state),
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json',
+            }
+        }
+        ).then(function(response){
+            response.json().then(function(resp){console.log(resp)})
+        })
+        console.log(this.state); }
+    
     render (){
         const {items} =this.state
        
@@ -66,8 +82,11 @@ class Detail extends React.Component{
 
                  </tbody>   
                  ))}
-                 
-
+                 <br></br>
+                 <div className="buttonDetail">
+                 <button className="btn btn-danger"onClick={()=>{this.reject()}}>Reject</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <button className="btn btn-success" onClick={()=>{this.accept()}}>Accept</button>
+                 </div>
              </table>
             </div>
             </div>
