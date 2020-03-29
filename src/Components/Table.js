@@ -65,10 +65,15 @@ class Table extends React.Component{
                            className="nav-link"><FontAwesomeIcon icon={faArrowCircleRight} /></Link>
                            </td>
                         <td>
-                            { item.accept==1 ?  <FontAwesomeIcon icon={faCheck} style={{color:"green" }}/>
+                            { item.accept==1 ?  ( 
+                            <FontAwesomeIcon icon={faCheck} style={{color:"green" }} />
+                           
+                            )
                             
-                           :  item.reject==1 && <FontAwesomeIcon icon={faTimes} style={{color:"red" }}/>  
-                            }
+                      :  item.reject==1 ? <FontAwesomeIcon icon={faTimes} style={{color:"red" }}/> 
+                      : <FontAwesomeIcon icon={faSpinner} style={{color:"black" }}/> }
+                          
+                            
                                 
                         </td>
                         </tr>

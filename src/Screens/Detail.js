@@ -46,7 +46,7 @@ class Detail extends React.Component{
             body:JSON.stringify(this.state),
         }
         )
-       
+        alert("APPLICATION ACCEPTED *-*")
     
     }
     
@@ -68,7 +68,7 @@ class Detail extends React.Component{
         }
         )
        
-    
+        alert("APPLICATION REJCTED u.u")
     }
 
     render (){
