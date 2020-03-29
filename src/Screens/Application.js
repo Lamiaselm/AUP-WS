@@ -17,18 +17,11 @@ class Application extends React.Component{
             github:"",
             linkedin:"",
             comments:"",
-            
-            
-           
         }
          }
       
 
     submit() {
-        
-            
-           
-        
         fetch('http://127.0.0.1:8000/api/save',{
             method:'post',
             body:JSON.stringify(this.state),

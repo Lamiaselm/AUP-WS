@@ -3,6 +3,10 @@ import Sidebar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar'
 import { Link, withRouter } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 class Table extends React.Component{
     constructor(props){
         super(props);
@@ -58,8 +62,15 @@ class Table extends React.Component{
                                    }
                           }}
                           
-                           className="nav-link">check</Link>
+                           className="nav-link"><FontAwesomeIcon icon={faArrowCircleRight} /></Link>
                            </td>
+                        <td>
+                            { item.accept==1 ?  <FontAwesomeIcon icon={faCheck} style={{color:"green" }}/>
+                            
+                           :  item.reject==1 && <FontAwesomeIcon icon={faTimes} style={{color:"red" }}/>  
+                            }
+                                
+                        </td>
                         </tr>
                     ))}
     
@@ -71,6 +82,6 @@ class Table extends React.Component{
         );
     }
 }
-export default Table;
+export default Table; 
 
 
