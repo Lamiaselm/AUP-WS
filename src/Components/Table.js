@@ -18,6 +18,7 @@ class Table extends React.Component{
                     items: json,
                     
                 })
+                console.log(this.state.items)
             }).catch((err) => {
                 console.log(err);
             });
