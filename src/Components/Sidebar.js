@@ -3,6 +3,8 @@ import logo from '../Assets/AUPLOGO.png'
 import { slide as Menu } from 'react-burger-menu';
 
 export default props => {
+  const {email}=localStorage.getItem('usertoken');
+  console.log(email);
   return (
     <Menu>
         <img src={logo} height="150px" style={{marginLeft:"27px" }}></img>
@@ -17,7 +19,7 @@ export default props => {
        Application
       </a>
 
-      <a className="menu-item" href="/Statut">
+      <a className="menu-item" href="/statut">
        Statut
       </a>
 

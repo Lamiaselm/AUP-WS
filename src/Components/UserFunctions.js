@@ -51,4 +51,5 @@ export const getProfile = () => {
         .catch(err => {
             console.log(err)
         })
+        
 }

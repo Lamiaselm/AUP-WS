@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './Components/Navbar'
 import Landing from './Components/Landing'
 import Login from './Components/Login'
@@ -10,6 +10,7 @@ import Table from './Components/Table'
 import Application from './Screens/Application'
 import Home from './Components/Home'
 import Detail from './Screens/Detail'
+import Statut from './Components/Statut'
 import './App.css';
 
 
@@ -28,7 +29,7 @@ class App extends Component {
             <Route exact path="/table" component={Table} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/detail" component={Detail} />
-            
+            <Route exact path="/statut" component={Statut} />
          
         </div>
       </Router>
