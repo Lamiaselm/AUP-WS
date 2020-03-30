@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar'
-import { Link, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'

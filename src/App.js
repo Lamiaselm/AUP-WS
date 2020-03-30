@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './App.css';
 import Navbar from './Components/Navbar'
 import Landing from './Components/Landing'
 import Login from './Components/Login'
@@ -11,7 +12,9 @@ import Application from './Screens/Application'
 import Home from './Components/Home'
 import Detail from './Screens/Detail'
 import Statut from './Components/Statut'
-import './App.css';
+
+
+
 
 
 

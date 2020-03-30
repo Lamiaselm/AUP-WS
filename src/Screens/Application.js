@@ -2,6 +2,9 @@ import React from 'react';
 import Sidebar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar'
 import { getProfile } from '../Components/UserFunctions'
+import Popup from '../Components/Popup'
+import '../App.css'
+import { push } from 'react-burger-menu';
 class Application extends React.Component{
     constructor(){
         super();
@@ -17,11 +20,47 @@ class Application extends React.Component{
             github:"",
             linkedin:"",
             comments:"",
+            random:0,
+            showPopup: false ,
+            result:'',
+            submitted:false ,
+            
         }
          }
-      
+       
+         componentDidMount(){
+             if (this.state.submitted==true)
+             {
+                this.props.history.push(`/statut`)
+             }
 
+         }
     submit() {
+       var team=this.state.team
+       console.log(team)
+       if (team==1){
+        function makeid(length) {
+            var result           = '';
+            var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var charactersLength = characters.length;
+            for ( var i = 0; i < length; i++ ) {
+               result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+         }
+         var code=makeid(15)
+         
+         console.log(code)
+         this.setState({  
+            showPopup: true ,
+            result:code,
+            submitted:true,
+       });
+       console.log(this.state.result)
+         
+       }
+       
+        
         fetch('http://127.0.0.1:8000/api/save',{
             method:'post',
             body:JSON.stringify(this.state),
@@ -30,10 +69,13 @@ class Application extends React.Component{
                 'Content-Type':'application/json',
             },
         }
-        ).then(function(response){
-            response.json().then(function(resp){console.log(resp)})
+        ).then(response => { 
+            
+            console.log(response)
         })
-       console.log(this.state);
+        .catch(err => {
+            console.log(err)
+        })
     }
 
    
@@ -43,13 +85,14 @@ class Application extends React.Component{
             <div> 
                 <Sidebar/>
                 <Navbar/>
-                
+                {this.state.showPopup== true && alert('ur code team is : '+this.state.result)  
+                  }
                 
 
                    
                   <div className="container">
                       <div className="container-inner">
-                          <form method="POST" >
+                          <form noValidate onSubmit={this.submit} >
                               <h3> Application Form</h3>
                               
                                 <div className="form-group">
