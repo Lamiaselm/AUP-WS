@@ -78,7 +78,10 @@ class Application extends React.Component{
                                  </div>
                                  <div className="form-group">
                                  <label>Do you have a team ? </label>
-                                 <input type="text" className="form-control" placeholder="Enter here " name="team" value={this.state.team} onChange={(item)=>{this.setState({team:item.target.value})}}/>
+                                 <select  className="form-control" onChange={(item)=>{this.setState({team:item.target.value})}} value={this.state.team} >
+                                     <option  value="1" >Oui</option>
+                                     <option  value="0" >Non</option>
+                                 </select>
                                  </div>
                                  <div className="form-group">
                                  <label> Attach your CV here  </label>
