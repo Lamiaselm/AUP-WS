@@ -20,9 +20,13 @@ import Team from './Components/Team'
 
 
 class App extends Component {
+  
+    
+  
+
   render() {
     return (
-      <Router>
+      <Router >
         <div className="App">
             
             <Route exact path="/" component={Landing} />

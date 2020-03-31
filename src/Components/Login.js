@@ -7,15 +7,26 @@ class Login extends Component {
         this.state = {
             email: '',
             password: '',
-            errors: {}
+            errors: {},
+            loggedin:false,
+            
         }
 
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
+ 
 
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value })
+    }
+    componentDidMount(){
+       var token=localStorage.getItem('usertoken')
+       if(token)
+       { this.props.history.push(`/profile`)}
+       else { this.props.history.push(`/login`)}
+
+      
     }
     onSubmit(e) {
         e.preventDefault()
@@ -27,8 +38,11 @@ class Login extends Component {
 
         login(user).then(res => {
             if (res) {
+                this.setState({
+                    loggedin:true,
+                });
                 this.props.history.push(`/profile`)
-            }
+            } else {alert("PLEASEENTER YOUR EMAIL/PASSWORD CORRECTLY ")}
         })
     }
 

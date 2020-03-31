@@ -16,6 +16,14 @@ class Register extends Component {
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
+    componentDidMount(){
+        var token=localStorage.getItem('usertoken')
+        if(token)
+        { this.props.history.push(`/profile`)}
+        else { this.props.history.push(`/register`)}
+ 
+       
+     }
 
     onChange (e) {
         this.setState({ [e.target.name]: e.target.value })

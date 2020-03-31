@@ -51,7 +51,7 @@ class Application extends React.Component{
        
        this.state.id_team=code
        
-       console.log(this.state.id_team)
+       
          
        }
        

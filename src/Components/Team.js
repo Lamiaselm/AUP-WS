@@ -51,7 +51,7 @@ class Team extends React.Component{
             <Sidebar/>
             <Navbar/>
             <div className="container">
-                <div className="jumbotron mt-4">
+                <div className="jumbotron mt-3">
                     <div className="col-sm-4 mx-auto">
         <h1 className="text-center"> Your team is :   </h1>  
                     </div>
