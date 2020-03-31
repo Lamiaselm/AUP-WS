@@ -36,7 +36,7 @@ render(){
         Profile
       </a>
 
-      <a className="menu-item" href="/Application">
+      <a className="menu-item" href="/application">
        Application
       </a>
 
@@ -44,7 +44,7 @@ render(){
        Statut
       </a>
 
-      <a className="menu-item" href="/Team">
+      <a className="menu-item" href="/team">
       Team
       </a>
       {this.state.email=="hl_selmane@esi.dz" &&  <a className="menu-item" href="/table">Answers </a>}

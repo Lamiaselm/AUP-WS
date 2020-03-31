@@ -45,11 +45,12 @@ class Application extends React.Component{
          var code=makeid(15)
          
          console.log(code)
-         this.setState({  
-            show:true,
-            id_team:code,
-           
-       });
+         this.setState({
+             show:true,
+         });
+       
+       this.state.id_team=code
+       
        console.log(this.state.id_team)
          
        }
@@ -79,7 +80,7 @@ class Application extends React.Component{
             <div> 
                 <Sidebar/>
                 <Navbar/>
-                {this.state.show==true && alert("YOUR TEAM CODE IS  : " +this.state.id_team)}
+                {this.state.show===true && alert("YOUR TEAM CODE IS  : " +this.state.id_team)}
                   <div className="container">
                       <div className="container-inner">
                           <form noValidate onSubmit={this.submit} >
