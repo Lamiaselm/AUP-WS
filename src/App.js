@@ -12,6 +12,7 @@ import Application from './Screens/Application'
 import Home from './Components/Home'
 import Detail from './Screens/Detail'
 import Statut from './Components/Statut'
+import Team from './Components/Team'
 
 
 
@@ -33,6 +34,7 @@ class App extends Component {
             <Route exact path="/home" component={Home} />
             <Route exact path="/detail" component={Detail} />
             <Route exact path="/statut" component={Statut} />
+            <Route exact path="/team" component={Team} />
          
         </div>
       </Router>

@@ -6,8 +6,8 @@ import Popup from '../Components/Popup'
 import '../App.css'
 import { push } from 'react-burger-menu';
 class Application extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             nom:"",
             prenom:"",
@@ -16,29 +16,23 @@ class Application extends React.Component{
             abt_urslf:"",
             why_aup:"",
             team:"",
+            new_team:"",
+            id_team:"",
             cv:"",
             github:"",
             linkedin:"",
             comments:"",
-            random:0,
-            showPopup: false ,
-            result:'',
-            submitted:false ,
+            show:false,
             
         }
          }
        
-         componentDidMount(){
-             if (this.state.submitted==true)
-             {
-                this.props.history.push(`/statut`)
-             }
-
-         }
+      
     submit() {
        var team=this.state.team
+       var new_team=this.state.new_team
        console.log(team)
-       if (team==1){
+       if ((team==1) && (new_team==1)){
         function makeid(length) {
             var result           = '';
             var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -52,11 +46,11 @@ class Application extends React.Component{
          
          console.log(code)
          this.setState({  
-            showPopup: true ,
-            result:code,
-            submitted:true,
+            show:true,
+            id_team:code,
+           
        });
-       console.log(this.state.result)
+       console.log(this.state.id_team)
          
        }
        
@@ -85,11 +79,7 @@ class Application extends React.Component{
             <div> 
                 <Sidebar/>
                 <Navbar/>
-                {this.state.showPopup== true && alert('ur code team is : '+this.state.result)  
-                  }
-                
-
-                   
+                {this.state.show==true && alert("YOUR TEAM CODE IS  : " +this.state.id_team)}
                   <div className="container">
                       <div className="container-inner">
                           <form noValidate onSubmit={this.submit} >
@@ -122,10 +112,29 @@ class Application extends React.Component{
                                  <div className="form-group">
                                  <label>Do you have a team ? </label>
                                  <select  className="form-control" onChange={(item)=>{this.setState({team:item.target.value})}} value={this.state.team} >
-                                     <option  value="1" >Oui</option>
-                                     <option  value="0" >Non</option>
+                                     <option  value="1" >Yes</option>
+                                     <option  value="0" >No</option>
                                  </select>
+                                
                                  </div>
+                                 {this.state.team==1 &&
+                                      <div className="form-group">
+                                      <label>New team ?</label>
+                                      <select  className="form-control" onChange={(item)=>{this.setState({new_team:item.target.value})}} value={this.state.new_team} >
+                                          <option  value="1" >Yes</option>
+                                          <option  value="0" >No</option>
+                                      </select>
+                                     
+                                      </div>
+                                }
+                                {
+                                    this.state.new_team==0   
+                                    && <div className="form-group">
+                                    <label> Enter your team code here  </label>
+                                    <input type="text" className="form-control" placeholder="Enter here " name="id_team" value={this.state.id_team} onChange={(item)=>{this.setState({id_team:item.target.value})}} />
+                                    </div>
+
+                                }
                                  <div className="form-group">
                                  <label> Attach your CV here  </label>
                                  <input type="text" className="form-control" placeholder="Enter here " name="cv" value={this.state.cv} onChange={(item)=>{this.setState({cv:item.target.value})}} />
