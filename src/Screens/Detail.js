@@ -83,8 +83,8 @@ class Detail extends React.Component{
             <Navbar/>
             <div className="containerDetail">
                 <div className="jumbotron mt-4">
-                    <div className="col-sm-6 mx-auto">
-        <h4 className="text-center">Application detail</h4>  
+                    <div className="col-sm-8 mx-auto">
+        <h4 className="center">Application detail</h4>  
             
              <table className="table">
                  
