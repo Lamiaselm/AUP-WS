@@ -51,6 +51,8 @@ class Register extends Component {
 
     render () {
         return (
+            <div>
+            <img className="my-container" />
             <div className="auth-wrapper">
             <div className="auth-inner">
             <form noValidate onSubmit={this.onSubmit}>
@@ -114,11 +116,12 @@ class Register extends Component {
                                 />
                             </div>
 
-            <button type="submit" className="btn btn-primary btn-block" >Sign Up !</button>
+            <button type="submit" className="btn btn-block loginF" >Sign Up !</button>
             <p className="forgot-password text-right">
                 Already registered <a href="/login">sign in?</a>
             </p>
         </form>
+        </div>
         </div>
         </div>
         )

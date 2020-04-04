@@ -48,7 +48,10 @@ class Login extends Component {
 
     render() {
         return (
+            <div>
+            <img className="my-container" />
             <div className="container">
+               
             <div className="container-inner">
             <form noValidate onSubmit={this.onSubmit}>
                     <h3>Log in</h3>
@@ -84,11 +87,12 @@ class Login extends Component {
                         </div>
                     </div>
     
-                    <button type="submit" className="btn btn-primary btn-block">Log in</button>
+                    <button type="submit" className="btn  btn-block loginF">Log in</button>
                     <p className="forgot-password text-right">
                         new account ? <a href="/register">Sign Up!</a>
                     </p>
                 </form>
+                </div>
                 </div>
                 </div>
         )

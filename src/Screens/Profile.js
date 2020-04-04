@@ -14,6 +14,10 @@ class Profile extends Component {
     }
 
     componentDidMount() {
+        var token=localStorage.getItem('usertoken')
+        if(token)
+        { this.props.history.push(`/profile`)}
+        else { this.props.history.push(`/login`)}
         getProfile().then(res => {
             this.setState({
                 nom: res.user.nom,

@@ -17,11 +17,11 @@ class Home extends React.Component{
               <div >
                   <img className="my-container" />
                   <img className="logoAUP" src={logoAUP}/> 
-                <form action="/login">
+                
                  <div>
-                 <button type="button" className="btn btn-secondary btn-lg login" onClick="/login">GET STARTED</button>
+                 <a href="/login" role="button" className="btn btn-secondary btn-lg login" >GET STARTED </a>
                  </div>
-                 </form>
+                 
                  
                 
                  </div>
