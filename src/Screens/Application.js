@@ -78,6 +78,8 @@ class Application extends React.Component{
         return(
          
             <div> 
+                
+               
                 <Sidebar/>
                 <Navbar/>
                 {this.state.show===true && alert("YOUR TEAM CODE IS  : " +this.state.id_team)}

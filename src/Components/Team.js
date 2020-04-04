@@ -47,13 +47,13 @@ class Team extends React.Component{
         const {items}=this.state;
         return(
             <div>
-
+            <img className="my-containerTeam" />
             <Sidebar/>
             <Navbar/>
             <div className="container">
-                <div className="jumbotron mt-3">
-                    <div className="col-sm-4 mx-auto">
-        <h1 className="text-center"> Your team is :   </h1>  
+                <div className="TeamInner">
+                    <div className="col-sm-8 mx-auto">
+                   <h1 className="center"> Your team :</h1>  
                     </div>
                     <table className="table col-md-4 mx-auto">
                         <thead>

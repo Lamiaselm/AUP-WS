@@ -52,9 +52,7 @@ render(){
 
      
 
-      <a className="menu-item" href="/Deconexion">
-     Deconexion
-      </a>
+      
     </Menu>
   );
 }

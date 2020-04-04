@@ -16,9 +16,7 @@ class Profile extends Component {
     componentDidMount() {
         var token=localStorage.getItem('usertoken')
         if(token)
-        { this.props.history.push(`/profile`)}
-        else { this.props.history.push(`/login`)}
-        getProfile().then(res => {
+        {   getProfile().then(res => {
             this.setState({
                 nom: res.user.nom,
                 prenom: res.user.prenom,
@@ -26,18 +24,24 @@ class Profile extends Component {
             })
             console.log(res.user.id)
         })
+            this.props.history.push(`/profile`)}
+        else { this.props.history.push(`/login`)}
+      
     }
 
     render() {
         return (
             <div>
+            <img className="my-containerProfile" />
 
             <Sidebar/>
             <Navbar/>
+            
+          
             <div className="container">
-                <div className="jumbotron mt-4">
-                    <div className="col-sm-4 mx-auto">
-        <h1 className="text-center">Welcome  {this.state.nom} &nbsp; {this.state.prenom}</h1>  
+                
+                <div className="col-sm-4 mx-auto">
+           <h1 className="text-center">Welcome  {this.state.nom} &nbsp; {this.state.prenom}</h1>  
                     </div>
                     <table className="table col-md-4 mx-auto">
                         <tbody>
@@ -48,7 +52,7 @@ class Profile extends Component {
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                
             </div>
             </div>
         )

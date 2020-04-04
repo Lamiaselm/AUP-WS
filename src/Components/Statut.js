@@ -51,6 +51,7 @@ class Statut extends React.Component{
         const {items} =this.state
         return(
             <div>
+                <img className="my-containerStatut" />
                 <Sidebar/>
                 <Navbar/>
             <div className="container">
