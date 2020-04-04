@@ -12,7 +12,6 @@ export const register = newUser => {
             console.log(err)
         })
 }
-
 export const login = user => {
     return axios
         .post(

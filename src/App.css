@@ -133,7 +133,7 @@ body, html, .App, #root, .auth-wrapper {
 }
 .accueil{
   position: absolute;
-  background-image: url("./Assets/accueil.jpg");
+  
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -148,7 +148,7 @@ body, html, .App, #root, .auth-wrapper {
 
 .application{
   position: absolute;
-  background-image: url("./Assets/app.jpg");
+ 
   background-size: cover;
 
   background-clip: content-box;
@@ -243,4 +243,156 @@ body, html, .App, #root, .auth-wrapper {
   margin: auto;  
   border-radius: 20px;  
   background: white;  
+}
+.my-container{
+  background-image: url('./Assets/bgg.jpg');
+  position: absolute;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-clip: content-box;
+  z-index: -5;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.AUP{
+  text-align: center;
+  color:#212b5c;
+  font-size: 60px;
+  margin-top:40px;
+  font-weight: 600;
+  font-family: 'Futura-Bold', sans-serif;
+  
+}
+@-webkit-keyframes mover1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(30px); }
+}
+ @keyframes mover1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(30px); }
+}
+@-webkit-keyframes mover2 {
+  0% { transform: translateX(30); }
+  100% { transform: translateX(60px); }
+}
+ @keyframes mover2 {
+  0% { transform: translateX(30); }
+  100% { transform: translateX(60px); }
+}
+@-webkit-keyframes mover3 {
+  0% { transform: translateX(20); }
+  100% { transform: translateX(30px); }
+}
+ @keyframes mover3 {
+  0% { transform: translateX(20); }
+  100% { transform: translateX(30px); }
+}
+@-webkit-keyframes mover4 {
+  0% { transform: translateY(20px); }
+  100% { transform: translateY(-10px); }
+}
+ @keyframes mover4 {
+  0% { transform: translateY(20px); }
+  100% { transform: translateY(-10px); }
+}
+
+
+.logomov{
+overflow: auto;
+zoom: 1;
+}
+.nuage1{
+  height: 100px;
+  margin-top:60px ;
+  margin-left: 60px;
+  -webkit-animation: mover1 1s infinite  alternate;
+  animation: mover1 1s infinite  alternate;
+
+}
+.nuage2{
+  height: 55px;
+  margin-top: 160px ;
+  margin-left: 5px;
+  
+}
+.nuage3{
+  height: 100px;
+  margin-top:60px ;
+  margin-left: 60px;
+  -webkit-animation: mover1 1s infinite  alternate;
+  animation: mover1 1s infinite  alternate;
+  
+}
+.nuage4{
+  height: 55px;
+  margin-top: 160px ;
+  margin-left: 130px;
+  
+}
+.nuage5{
+  height: 35px;
+  margin-top: 30px ;
+  margin-left: 480px;
+ 
+}
+.nuage6{
+  height: 35px;
+  margin-top: 30px ;
+  margin-left: 120px;
+ 
+}
+.logoAUP{
+  height: 90px;
+  width: 97px;
+  margin-left: 640px;
+  margin-top: 220px;
+  -webkit-animation: mover4 1s infinite  alternate;
+  animation: mover4 1s infinite  alternate;
+}
+
+.btn-ripple {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	transition: all ease-in-out .5s;
+}
+
+.btn-ripple::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 25%;
+	height: 100%;
+	width: 50%;
+	background-color: #000;
+	border-radius: 50%;
+	opacity: 0;
+	pointer-events: none;
+	transition: all ease-in-out 1s;
+	transform: scale(5, 5);
+}
+
+.btn-ripple:active::after {
+	padding: 0;
+	margin: 0;
+	opacity: .2;
+	transition: 0s;
+	transform: scale(0, 0);
+}
+.register{
+  background-color: #4f7bc2;
+  margin-top: 100px;
+  margin-left: 50px;
+
+}
+.login{
+
+  margin-top: 100px;
+  margin-left: 620px;
+  position: absolute;
+
 }
